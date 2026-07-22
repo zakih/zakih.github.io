@@ -1,76 +1,150 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Dr. Zaki</title>
-<style>
-.container { 
-  height: 300px;
-  position: relative;
-}
-
-.center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-a:link {
-  color: #e8fcf2;
-  background-color: transparent;
-  text-decoration: none;
-}
-a:visited {
-  color: #e8fcf2;
-  background-color: transparent;
-  text-decoration: none;
-}
-a:hover {
-  color: #ebfff5;
-  background-color: transparent;
-  text-decoration: underline;
-}
-a:active {
-  color: #e8fcf2;
-  background-color: transparent;
-  text-decoration: underline;
-}
-</style>
-
-
-
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zaki Hasnain PhD</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #42f5a1;
+    font-family: Garamond, Georgia, serif;
+    color: #2b4539;
+    margin: 0;
+    padding: 40px 20px 120px 20px; /* Bottom padding keeps space above fixed art */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center main layout column */
+  }
+
+  /* Header Section */
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  h1 {
+    margin-bottom: 8px;
+  }
+
+  .social-links {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  /* Link Styling */
+  a:link, a:visited {
+    color: #1f382e;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  a:hover, a:active {
+    color: #0d1a15;
+    text-decoration: underline;
+  }
+
+  /* Main Blog/Project Feed */
+  main {
+    width: 100%;
+    max-width: 650px; /* Constrains content to a readable center column */
+  }
+
+  /* Individual Project Card */
+  .project-card {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 30px; /* Space between posts */
+    text-align: left;    /* Keeps text left-aligned */
+  }
+
+  .project-card h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+  }
+
+  .project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-top: 12px;
+    display: block;
+  }
+
+  /* Fixed Bottom-Left ASCII Art */
+  .ascii-container {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 10;
+    pointer-events: none; /* Prevents art from blocking clicks */
+  }
+
+  pre.ascii-art {
+    margin: 0;
+    font-family: monospace;
+    font-size: 9px; /* Shrunk slightly to fit neatly in corner */
+    line-height: 1.05;
+    color: #1a3026;
+  }
+
+  .ascii-credit {
+    font-family: sans-serif;
+    font-size: 10px;
+    color: #1f382e;
+    margin: 4px 0 0 0;
+    pointer-events: auto; /* Re-enables links if added inside credit */
+  }
+
+  /* Hide ASCII art on narrow mobile screens so it doesn't overlap text */
+  @media (max-width: 768px) {
+    .ascii-container {
+      display: none;
+    }
+  }
+</style>
 </head>
 
 <body style="background-color:#42f5a1;">
 
-<div class="container">
-  <div class="center">
-	<h1 style="font-family:Garamond;text-align:center;color:#2b4539;">Zaki Hasnain, PhD</h1>
-	<p style="text-align:center;color:#2b4539;"> <i> Find me on: </i></p>
-	<h3 style="text-align:center;color:#2b4539;font-family:Garamond;"> <a href="https://www.linkedin.com/in/zaki-hasnain-1887b8126">LinkedIn</a> </h3>
-	<h3 style="text-align:center;color:#2b4539;font-family:Garamond;"> <a href="https://www.researchgate.net/profile/Zaki_Hasnain">ResearchGate</a></h3>
-	<h3 style="text-align:center;color:#2b4539;font-family:Garamond;">& </h3>
-	<h3 style="text-align:center;color:#2b4539;font-family:Garamond;"><a href="https://scholar.google.com/citations?user=-K7k1toAAAAJ&hl=en&oi=ao">Google Scholar</a> </h3>
-  </div>
-</div>
-
-<div class="container">
-    <div class="left">
-        <h3>
-            <a href="https://github.com/zakih/cuda-cubesat" target="_blank" rel="noopener noreferrer">
-                CUDA-CubeSat
-            </a>
-        </h3>
-        <p>A transient thermal simulation of a 6U CubeSat, written to compare how OpenMP and CUDA parallelism accelerate a nodal heat-transfer problem.</p>
-        <a href="https://github.com/zakih/cuda-cubesat" target="_blank" rel="noopener noreferrer">
-            <img src="https://raw.githubusercontent.com/zakih/cuda-cubesat/refs/heads/main/example/results_field.png" alt="Project preview" style="max-width: 100%; height: auto;" />
-        </a>
+<!-- Header Section -->
+  <header>
+    <h1>Zaki Hasnain, PhD</h1>
+    <div class="social-links">
+      <p><i>Find me on:</i></p>
+      <a href="https://www.linkedin.com/in/zaki-hasnain-1887b8126" target="_blank" rel="noopener">LinkedIn</a> &bull; 
+      <a href="https://www.researchgate.net/profile/Zaki_Hasnain" target="_blank" rel="noopener">ResearchGate</a> &bull; 
+      <a href="https://scholar.google.com/citations?user=-K7k1toAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar</a>
     </div>
-</div>
+  </header>
 
-<pre style="color:#000000;">
+<!-- Running Blog/Project Stream -->
+  <main>
+    
+    <!-- Project Entry 1 -->
+    <article class="project-card">
+      <h3>
+        <a href="https://github.com/zakih/cuda-cubesat" target="_blank" rel="noopener noreferrer">
+          CUDA-CubeSat
+        </a>
+      </h3>
+      <p>A transient thermal simulation of a 6U CubeSat, written to compare how OpenMP and CUDA parallelism accelerate a nodal heat-transfer problem.</p>
+      <a href="https://github.com/zakih/cuda-cubesat" target="_blank" rel="noopener noreferrer">
+        <img src="https://raw.githubusercontent.com/zakih/cuda-cubesat/refs/heads/main/example/results_field.png" alt="CUDA-CubeSat Project Preview" />
+      </a>
+    </article>
+
+    <!-- Copy/paste the .project-card block above to add future works below -->
+
+  </main>
+
+
+	<!-- Bottom-Left ASCII Art -->
+  <div class="ascii-container">
+<pre class="ascii-art" style="color:#000000;">
 
                             .d$$b
                           .' TO$;\
@@ -98,10 +172,8 @@ a:active {
                            :\
                            ;
 </pre>
-<p style="color:#38cf88;"> (asciiart.eu/animals/wolves) Art by Blazej Kozlowski</a></p>
-
-
-
+    <p class="ascii-credit">Art by Blazej Kozlowski (asciiart.eu/animals/wolves)</p>
+  </div>
 
 
 
